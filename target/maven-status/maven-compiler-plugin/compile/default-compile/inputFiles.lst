@@ -1,0 +1,7 @@
+/home/houcine/Java EE/workspace-spring/struts2example/src/main/java/com/struts/entities/Produit.java
+/home/houcine/Java EE/workspace-spring/struts2example/src/main/java/com/struts/service/CatalogueServiceImpl.java
+/home/houcine/Java EE/workspace-spring/struts2example/src/main/java/com/struts/service/ICatalagueService.java
+/home/houcine/Java EE/workspace-spring/struts2example/src/main/java/com/struts/dao/CatalogueDAOImpl.java
+/home/houcine/Java EE/workspace-spring/struts2example/src/main/java/com/struts/service/SingletonService.java
+/home/houcine/Java EE/workspace-spring/struts2example/src/main/java/com/struts/dao/ICatalogueDAO.java
+/home/houcine/Java EE/workspace-spring/struts2example/src/main/java/com/struts/web/ProduitAction.java

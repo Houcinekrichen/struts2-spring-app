@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN"
+        "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	<field name="produit.reference">
+		<field-validator type="requiredstring">
+			<message key="reference.msg"></message>
+		</field-validator>
+	</field>
+</validators>
