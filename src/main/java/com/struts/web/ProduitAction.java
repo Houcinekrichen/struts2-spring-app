@@ -2,10 +2,14 @@ package com.struts.web;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
 import com.opensymphony.xwork2.ActionSupport;
 import com.struts.entities.Produit;
+import com.struts.service.CatalogueServiceImpl;
 import com.struts.service.ICatalagueService;
-import com.struts.service.SingletonService;
+
 
 public class ProduitAction extends ActionSupport {
 
@@ -14,8 +18,10 @@ public class ProduitAction extends ActionSupport {
 	public String ref;
 	public boolean editmode = false;
 
-	ICatalagueService service = SingletonService.getService();
-
+	@Autowired 
+	private ICatalagueService service ;
+	
+	
 	public String index() {
 		produits = service.listProduits();
 		return "SUCCESS";
