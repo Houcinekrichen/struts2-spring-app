@@ -1,53 +1,51 @@
-<div class="navbar-default sidebar" role="navigation">
-	<div class="sidebar-nav navbar-collapse">
-		<ul class="nav" id="side-menu">
-			<li class="sidebar-search">
-				<div class="input-group custom-search-form">
-					<input type="text" class="form-control" placeholder="Recherche...">
-					<span class="input-group-btn">
-						<button class="btn btn-default" type="button">
-							<i class="fa fa-search"></i>
-						</button>
-					</span>
-				</div> <!-- /input-group -->
-			</li>
-			<c:url value="/home/" var="home" />
-			<li class=""><a href="${home }"><i class="fa fa-dashboard fa-fw"></i>
-					Home </a></li>
-			<c:url value="/article/" var="article" />
-			<li><a href="${article }"><i class="fa fa-barcode fa-fw"></i>
-					<fmt:message code="common.article" /> </a></li>
-			<li><a href="#"><i class="fa fa-users fa-fw"></i>
-					<fmt:message code="common.client" /><span class="fa arrow"></span></a>
-				<ul class="nav nav-second-level" area-expended="false">
-					<c:url value="/client/" var="client" />
-					<li><a href="${client }"><fmt:message code="common.client" /></a></li>
-					<c:url value="/commandeclient/" var="cdeClient" />
-					<li><a href="${cdeClt }"><fmt:message code="common.client.commande" /></a></li>
-				</ul> <!-- /.nav-second-level --></li>
-			<li><a href="#"><i class="fa fa-users fa-fw"></i>
-					<fmt:message code="common.fournisseur" /><span class="fa arrow"></span></a>
-				<ul class="nav nav-second-level">
-					<c:url value="/fournisseur/" var="fournisseur" />
-					<li><a href="${fournisseur }"><fmt:message code="common.fournisseur" /></a></li>
-					<c:url value="/commandefournisseur/" var="fournisseur" />
-					<li><a href="${fournisseur }"><fmt:message code="common.fournisseur.commande" /></a></li>
-				</ul> <!-- /.nav-second-level --></li>
-			<c:url value="/stock/" var="stock" />
-			<li><a href="${stock }"><i class="fa fa-dropbox fa-fw"></i>
-					<fmt:message code="common.stock" /></a></li>
-			<c:url value="/vente/" var="vente" />
-			<li><a href="${vente }"><i class="fa fa-shopping-cart fa-fw"></i>
-					<fmt:message code="common.vente" /></a></li>
-			<li><a href="#"><i class="fa fa-wrench fa-fw"></i>
-					<fmt:message code="common.parametrage" /><span class="fa arrow"></span></a>
-				<ul class="nav nav-second-level">
-					<c:url value="/utilisateur/" var="user" />
-					<li><a href="${user }"><fmt:message code="common.parametrage.utilisateur" /></a></li>
-					<c:url value="/category/" var="category" />
-					<li><a href="${category }"><fmt:message code="common.parametrage.category" /></a></li>
-				</ul> <!-- /.nav-second-level --></li>
-		</ul>
-	</div>
-	<!-- /.sidebar-collapse -->
-</div>
+	<%@ taglib prefix="s" uri="/struts-tags"%>
+	<div class="sidebar" data-background-color="black"
+			data-active-color="danger">
+
+			<!--
+		Tip 1: you can change the color of the sidebar's background using: data-background-color="white | black"
+		Tip 2: you can change the color of the active button using the data-active-color="primary | info | success | warning | danger"
+	-->
+
+			<div class="sidebar-wrapper">
+				<div class="logo">
+					<a href="http://www.creative-tim.com" class="simple-text">
+						Struts 2 Application </a>
+				</div>
+
+				<ul class="nav">
+				
+					<s:url namespace="/" action="produits" var="url1">
+												
+					</s:url>
+					
+					<li class="active"><s:a href="%{url1}"> <i
+							class="ti-panel"></i>
+							<p>Gérer Produits</p>
+					</s:a></li>
+					
+					<li><a href="user.html"> <i class="ti-user"></i>
+							<p>User Profile</p>
+					</a></li>
+					<li><a href="table.html"> <i class="ti-view-list-alt"></i>
+							<p>Table List</p>
+					</a></li>
+					<li><a href="typography.html"> <i class="ti-text"></i>
+							<p>Typography</p>
+					</a></li>
+					<li><a href="icons.html"> <i class="ti-pencil-alt2"></i>
+							<p>Icons</p>
+					</a></li>
+					<li><a href="maps.html"> <i class="ti-map"></i>
+							<p>Maps</p>
+					</a></li>
+					<li><a href="notifications.html"> <i class="ti-bell"></i>
+							<p>Notifications</p>
+					</a></li>
+					<li class="active-pro"><a href="upgrade.html"> <i
+							class="ti-export"></i>
+							<p>Upgrade to PRO</p>
+					</a></li>
+				</ul>
+			</div>
+		</div>
